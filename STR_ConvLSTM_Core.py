@@ -106,7 +106,7 @@ def evaluate_model(model, test_loader, target_scaler, device):
     pass
 
 if __name__ == "__main__":
-    # Hyperparameter configurations from the paper
+    # A part of Hyperparameter configurations from the paper
     config = {
         "lr": 5e-5,
         "batch_size": 16,
