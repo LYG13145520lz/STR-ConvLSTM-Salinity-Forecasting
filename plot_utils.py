@@ -283,7 +283,7 @@ def plot_spatial_variation_analysis(pkl_path='/results/ConvLSTM_Seq2Seq_predicti
         cb.ax.tick_params(labelsize=13)
 
     plt.tight_layout()
-    plt.savefig('Figure6_Final_Restored.png', dpi=300, bbox_inches='tight')
+    plt.savefig('Figure6.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 
