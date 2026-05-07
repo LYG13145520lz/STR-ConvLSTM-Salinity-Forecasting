@@ -11,7 +11,7 @@ from cartopy.mpl.ticker import LongitudeFormatter, LatitudeFormatter
 import matplotlib.patches as mpatches
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
-def plot_regional_salinity_map(csv_path="/root/spatiotemporal_features.csv"):
+def plot_regional_salinity_map(csv_path="/spatiotemporal_features.csv"):
     try:
         df = pd.read_csv(csv_path)
         df["time"] = pd.to_datetime(df["time"])
