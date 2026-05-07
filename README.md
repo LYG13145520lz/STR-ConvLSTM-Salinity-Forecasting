@@ -3,6 +3,19 @@
 
 This repository contains the official implementation of the **STR-ConvLSTM** model as described in the manuscript: *"STR-ConvLSTM: A Spatiotemporal Residual Learning Framework for Multivariate Salinity Forecasting in the Yangtze River Estuary"*.
 
+## 📊 Data Availability
+
+### Raw Dataset
+
+The complete spatiotemporal salinity dataset used in this study is publicly available at **Figshare**:
+
+| Item | Details |
+|------|---------|
+| **Repository** | Figshare |
+| **DOI** | `10.6084/m9.figshare.31041805` |
+| **Direct Link** | 🔗 [https://doi.org/10.6084/m9.figshare.31041805](https://doi.org/10.6084/m9.figshare.31041805) |
+| **License** | CC BY 4.0 |
+
 ## Key Features
 - **Residual Learning Strategy**: Reformulates salinity prediction from absolute values to temporal increments to handle non-stationarity.
 - **Multivariate Integration**: Synergistically combines SSS with current velocity, SST, and SSH.
