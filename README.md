@@ -43,12 +43,12 @@ This module contains functions for generating publication-quality figures for th
 
 #### 📦 Dependencies
 
-```bash
+
 numpy>=1.21
 matplotlib>=3.5
 pandas>=1.3
 scipy>=1.7
-cartopy>=0.20  # for geographic mapping
+cartopy>=0.20 
 
 ## 🔬 Ablation Study
 
@@ -64,7 +64,7 @@ This script runs the ablation study for STR-ConvLSTM, comparing three model vari
 
 #### 📦 Dependencies
 
-```bash
+bash
 # Core
 numpy>=1.21
 pandas>=1.3
@@ -75,5 +75,5 @@ tqdm>=4.62
 
 # Optional (for visualization)
 matplotlib>=3.5
-cartopy>=0.20  # geographic mapping
+cartopy>=0.20  
 
