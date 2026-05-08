@@ -11,7 +11,7 @@ from cartopy.mpl.ticker import LongitudeFormatter, LatitudeFormatter
 import matplotlib.patches as mpatches
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
-def plot_regional_salinity_map(csv_path="/spatiotemporal_features.csv"):
+def plot_regional_salinity_map(csv_path="./spatiotemporal_features.csv"):
     try:
         df = pd.read_csv(csv_path)
         df["time"] = pd.to_datetime(df["time"])
@@ -108,7 +108,7 @@ def plot_regional_salinity_map(csv_path="/spatiotemporal_features.csv"):
     except Exception as e:
         print(f"[Error] Unexpected error: {e}")
 
-def plot_timeseries_comparison(pkl_path='/results/ConvLSTM_Seq2Seq_predictions_h5.pkl'):
+def plot_timeseries_comparison(pkl_path='./results/ConvLSTM_Seq2Seq_predictions_h5.pkl'):
     try:
         with open(pkl_path, 'rb') as f:
             data = pickle.load(f)
@@ -198,7 +198,7 @@ def plot_timeseries_comparison(pkl_path='/results/ConvLSTM_Seq2Seq_predictions_h
     plt.savefig('Timeseries_Two_Points.png', dpi=300, bbox_inches='tight')
     plt.show()
 
-def plot_spatial_variation_analysis(pkl_path='/results/ConvLSTM_Seq2Seq_predictions_h5.pkl'):
+def plot_spatial_variation_analysis(pkl_path='./results/ConvLSTM_Seq2Seq_predictions_h5.pkl'):
     try:
         with open(pkl_path, 'rb') as f:
             data = pickle.load(f)
