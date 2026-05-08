@@ -16,22 +16,37 @@ The complete spatiotemporal salinity dataset used in this study is publicly avai
 | **Direct Link** | 🔗 [https://doi.org/10.6084/m9.figshare.31041805](https://doi.org/10.6084/m9.figshare.31041805) |
 | **License** | CC BY 4.0 |
 
-## Key Features
-- **Residual Learning Strategy**: Reformulates salinity prediction from absolute values to temporal increments to handle non-stationarity.
-- **Multivariate Integration**: Synergistically combines SSS with current velocity, SST, and SSH.
-- **Hierarchical Preprocessing**: Robust 4-stage data reconstruction pipeline for estuarine datasets.
-
-## Requirements
-- PyTorch 2.0+
-- Pandas, NumPy, Scikit-learn
-- Scipy (for spatial interpolation)
-
+## Experiment Execution Guide
+This section describes how to replicate the full experimental results by running the statistical baselines and the deep learning suite across different forecast horizons
+### STR_ConvLSTM_Core.py
+### run_baselines.py
+1. Prerequisites and Data Preparation
+Before running the experiments, ensure you have the complete dataset.
+Dataset File: spatiotemporal_features.csv
+Location: Place the CSV file in the root directory (or update the file_path in the config dictionary within the scripts).
+Time Range: The scripts are pre-configured to filter data from 2008-01-01 onwards to ensure data quality and consistency.
+2. Running Statistical Baselines
+The run_baselines.py script computes the performance for the Persistence and ARIMA models. These models provide the benchmark for evaluating the necessity of deep learning architectures. ```python run_baselines.py
+3. Running Deep Learning Core
+The STR_ConvLSTM_Core.py script handles the training and evaluation of 7 different architectures: ConvLSTM, LSTM, GRU, TCN, Informer, Autoformer, and Transformer.
+4. Multi-Horizon Analysis
+To obtain the full set of results presented in the study, you must conduct experiments across multiple forecast horizons (h)
+How to change the Horizon:
+In both run_baselines.py and STR_ConvLSTM_Core.py, locate the config dictionary at the beginning of the main execution block: config = {
+    ...
+    "horizon": 3,  # Modify this value to 1, 3, or 5
+    ...
+}
+5. Result Collection and Evaluation
+Console Output: After each run, the scripts will print a summary table containing the MAE and RMSE for every model.
+Pickle Files: For the deep learning experiments, the script creates a directory (e.g., ./final_results) and saves .pkl files containing the raw y_true and y_pred arrays.
+Naming Convention: Saved files are named as {model_name}_predictions_h{horizon}.pkl to prevent overwriting results from different horizons.
 
 ## 📊 Visualization Tools
 
 ### `visualization.py`
 
-This module contains functions for generating publication-quality figures for the STR-ConvLSTM salinity prediction study.
+This module contains functions for generating publication-quality figures for the STR-ConvLSTM salinity prediction study. ```python STR_ConvLSTM_Core.py
 
 #### 🔧 Functions
 
