@@ -26,9 +26,11 @@ Dataset File: spatiotemporal_features.csv
 Location: Place the CSV file in the root directory (or update the file_path in the config dictionary within the scripts).
 Time Range: The scripts are pre-configured to filter data from 2008-01-01 onwards to ensure data quality and consistency.
 2. Running Statistical Baselines
-The run_baselines.py script computes the performance for the Persistence and ARIMA models. These models provide the benchmark for evaluating the necessity of deep learning architectures. ```python run_baselines.py
+The run_baselines.py script computes the performance for the Persistence and ARIMA models. These models provide the benchmark for evaluating the necessity of deep learning architectures. 
+python run_baselines.py
 3. Running Deep Learning Core
 The STR_ConvLSTM_Core.py script handles the training and evaluation of 7 different architectures: ConvLSTM, LSTM, GRU, TCN, Informer, Autoformer, and Transformer.
+python run_baselines.py
 4. Multi-Horizon Analysis
 To obtain the full set of results presented in the study, you must conduct experiments across multiple forecast horizons (h)
 How to change the Horizon:
