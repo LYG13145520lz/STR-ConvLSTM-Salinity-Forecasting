@@ -80,18 +80,5 @@ This script runs the ablation study for STR-ConvLSTM, comparing three model vari
 | `STR-ConvLSTM w/o Residual` | Absolute prediction variant (no residual learning) |
 | `STR-ConvLSTM w/o Physical Covariates` | Univariate variant (salinity + time features only) |
 
-#### 📦 Dependencies
 
-bash
-# Core
-numpy>=1.21
-pandas>=1.3
-torch>=1.9
-scikit-learn>=0.24
-scipy>=1.7
-tqdm>=4.62
-
-# Optional (for visualization)
-matplotlib>=3.5
-cartopy>=0.20  
 
