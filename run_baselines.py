@@ -13,7 +13,7 @@ config = {
     "test_ratio": 0.2,
     "window_size": 50,
     "stride": 25,
-    "horizon": 5,
+    "horizon": 5, #To run experiments , modify the `horizon` parameter in the `config` dictionary: Options: 1, 3, 5 
     "target": "so_glor"
 }
 
