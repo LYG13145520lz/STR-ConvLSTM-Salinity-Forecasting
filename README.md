@@ -17,7 +17,8 @@ The complete spatiotemporal salinity dataset used in this study is publicly avai
 | **License** | CC BY 4.0 |
 
 ## Experiment Execution Guide
-This section describes how to replicate the full experimental results by running the statistical baselines and the deep learning suite across different forecast horizons
+This section describes how to replicate the full experimental results by running the statistical baselines and the deep learning suite across different forecast horizons. 
+Python Version: This environment is based on Python 3.7.
 ### STR_ConvLSTM_Core.py
 ### run_baselines.py
 1. Prerequisites and Data Preparation
