@@ -31,7 +31,7 @@ The run_baselines.py script computes the performance for the Persistence and ARI
 python run_baselines.py
 3. Running Deep Learning Core
 The STR_ConvLSTM_Core.py script handles the training and evaluation of 7 different architectures: ConvLSTM, LSTM, GRU, TCN, Informer, Autoformer, and Transformer.
-python run_baselines.py
+python STR_ConvLSTM_Core.py
 4. Multi-Horizon Analysis
 To obtain the full set of results presented in the study, you must conduct experiments across multiple forecast horizons (h)
 How to change the Horizon:
